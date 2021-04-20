@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DigitalWeb</title>
+    <meta name="description" content="....">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <SCRIPT language="JavaScript" type="text/javascript">
+ 
+        // Un tableau qui va contenir toutes tes images.
+        var images = new Array();
+        images.push("./img/1.png");
+        images.push("./img/2.png");
+        images.push("./img/3.png");
+         
+        var pointeur = 0;
+         
+        function ChangerImage(){
+        document.getElementById("masuperimage").src = images[pointeur];
+         
+        if(pointeur < images.length - 1){
+        pointeur++;
+        }
+        else{
+        pointeur = 0;
+        }
+         
+        setTimeout("ChangerImage()", 2000)
+        }
+         
+        // Charge la fonction
+        window.onload = function(){
+        ChangerImage();
+        }
+        </SCRIPT>
+</head>
+
+<body>
+    <section class="structure">
+    
+        <header>
+                <ul class="langue">
+                   <li> <button class="flag fr"></button></li>
+                   <li> <button class="flag en"></button></li> 
+                   <li> <button class="flag de"></button></li>
+                   <li> <button class="flag ita"></button></li>
+                   <li> <button class="flag es"></button></li>
+                </ul>
+
+                <div class="logo"><img src="./img/logo.PNG"></div>
+                <button class="helpcall"><img src="./img/phone-call.svg" style="width:25px;height:25px;margin-top: 14px;"><p class="helptext">Aide en ligne</p></button>
+        </header>
+               
+                    <nav class="barre">
+                        <ul class="menunav">
+                            <li class="menut">Accueil</li>
+                            <li class="menut">Equipe</li>
+                            <li class="menut">Tarifs</li>
+                            <li class="menut">Avis</li>
+                            <li class="menut">Contact</li>
+                        </ul>
+                            <ul class="menunav2">
+                            <li class="menut">Connexion</li>
+                            <li class="menut">Inscription</li>
+                            </ul>
+                        </nav>
+           
+
+                <div class="rate">
+                   <p class="ratetext"> Barre d'avis vide car pas de php // à coder plus tard bla bla bla bla juste pour combler le vide apzaooza uazna  </p>
+                </div>
+
+                <div class="boxcontent">
+                    <div class="smallbox one">
+                        <div class="titrebox"><p class="title_box">Penser</p></div>
+                    </div>
+                    <div class="smallbox two">
+                        <div class="titrebox"><p class="title_box">S'informer</p></div>
+                    </div>
+                    <div class="smallbox three">
+                        <div class="titrebox"><p class="title_box">Réaliser</p></div>
+                    </div>
+                </div>
+
+
+                <section class="largebox-content">
+                    <div class="boxleft">
+                        <h1 class="titlebox1">DigitalWeb c'est quoi?</h1>
+                        <p class="text_box"><img src="./img/1.png" width="100%" height="463" id="masuperimage"/></p>
+                    </div>
+                    <div class="boxright">
+                        <h1 class="titlebox2">Une question?</h1>
+                       
+                            <form class="post" method="post" action="index.html">
+                                <input class="formu" type="text" name="prenom" placeholder="Prénom" required>
+                                <input class="formu" type="email" name="mail" placeholder="Email" required>
+                                <input class="formu" type="tel" name="telephone" placeholder="Téléphone">
+                                <textarea id="msg" name="message"rows="5" cols="33" 
+                                placeholder="Votre message" required></textarea>
+                                <input class ="checkboxx" type="checkbox" name="CGU" required> <label class="cguvld">J'accepte que DigitalWeb me rappelle.</label>
+                                <input class="buttonc"type="submit" name="send" placeholder="Envoyer">
+                                
+                              
+
+
+                            </form>
+
+                    </div>
+                </section>
+
+    </section>
+</body>
+</html>
